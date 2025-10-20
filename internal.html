@@ -1,68 +1,87 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Internal CSS</title>
+    <title>Latihan CSS Internal</title>
     <style>
-        /* All */
-        *{
+        body {
             font-family: Arial, Helvetica, sans-serif;
+            background-color: white;
+            color: black;
+            margin: 25px;
         }
 
-        /* Selector Class (.) */
-        .selector-class1 p {
-            text-align: center; 
-            color: red; 
+        h2 {
+            background-color: lightgray;
+            padding: 5px;
         }
-        .selector-class2{
+
+        hr {
+            margin: 25px 0;
+        }
+
+        .hasil {
+            background-color: #f2f2f2;
+            padding: 10px;
+            border: 1px solid #ccc;
+        }
+
+        p {
             text-align: center;
             color: red;
         }
-        .selector-class3 p{
-            color: red;
-            text-align: right;
+
+        #para1 {
+            text-align: center;
+            color: blue;
         }
 
-        /* Selector ID (#) */
-        #selector-id{
-            color: red;
-            text-align: right;
+        .center {
+            text-align: center;
+            color: green;
+        }
+
+        p.center {
+            text-align: center;
+            color: purple;
         }
     </style>
 </head>
 <body>
-    <!-- Selector Class (.)-->
-    <h1>Selector Element :</h1>
-    <div class="selector-class1">
-        <p>Every paragraph will be affected by the style.</p> 
-        <p id="para1">Me too!</p> 
-        <p>And me!</p>
+
+    <h1>3.1 Latihan CSS - Internal CSS</h1>
+
+    <h2>1. Selektor Elemen</h2>
+    <div class="hasil">
+        <p>Every paragraph will be affected by the style.</p>
+        <p>Me too!</p>
+        <p>And me!</p>
     </div>
-    <br>
+
     <hr>
 
-    <h1>Selector Class :</h1>
-    <div class="selector-class2">
-        <h1>Red and center-aligned heading</h1>
-        <p>Red and center-aligned paragraph.</p>
-    </div>
-    <br>
-
-    <div class="selector-class3">
-        <h1>This heading will not be affected</h1>
-        <p>This paragraph will not be affected either.</p>
-    </div>
-    <br>
-    <hr>
-    
-    <!-- Selector ID (#)-->
-    <h1>Selector ID :</h1>
-    <div>
-        <p id="selector-id">Hello World!</p>
+    <h2>2. Selektor ID</h2>
+    <div class="hasil">
+        <p id="para1">Hello World!</p>
         <p>This paragraph is not affected by the style.</p>
     </div>
-    <br>
+
     <hr>
+
+    <h2>3. Selektor Kelas</h2>
+    <div class="hasil">
+        <h1 class="center">Green and center-aligned heading</h1>
+        <p class="center">Green and center-aligned paragraph.</p>
+    </div>
+
+    <hr>
+
+    <h2>4. Selektor Kelas untuk Elemen HTML Tertentu</h2>
+    <div class="hasil">
+        <h1 class="center">This heading will not be affected</h1>
+        <p class="center">This paragraph will be purple and center-aligned.</p>
+    </div>
+
 </body>
 </html>
